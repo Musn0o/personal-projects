@@ -4,6 +4,12 @@ from nltk.corpus import wordnet
 from nltk import pos_tag
 from nltk.stem import WordNetLemmatizer
 import spacy
+from sentence_transformers import SentenceTransformer
+
+# Load a pre-trained SBERT model
+sbert_model = SentenceTransformer('all-MiniLM-L6-v2')
+
+
 
 # Download necessary NLTK resources
 nltk.download("averaged_perceptron_tagger")
